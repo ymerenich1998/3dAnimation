@@ -14,9 +14,10 @@ export default function Water({ children }) {
       }}
     >
       <WaterWave
+        imageUrl="/123.jpg"
         style={{ width: "100%", height: "100%" }}
-        dropRadius={40}
-        perturbance={0.9}
+        dropRadius={20}
+        perturbance={0.02}
         resolution={512}
         interactive={true}
       >
