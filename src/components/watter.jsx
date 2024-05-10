@@ -1,6 +1,5 @@
 "use client";
 import dynamic from "next/dynamic";
-import { Children } from "react";
 
 const WaterWave = dynamic(() => import("react-water-wave"), { ssr: false });
 
@@ -10,8 +9,8 @@ export default function Water({ children }) {
       style={{
         width: "100%",
         height: "100vh",
-        backgroundSize: "cover",
-        background: "#FCF9F1",
+
+        background: `url("/234.jpg") no-repeat ,#FCF9F1`,
       }}
     >
       <WaterWave
