@@ -15,8 +15,9 @@ export default function Water({ children }) {
     >
       <WaterWave
         style={{ width: "100%", height: "100%" }}
-        dropRadius={50}
-        perturbance={0.05}
+        dropRadius={40}
+        perturbance={0.9}
+        resolution={512}
         interactive={true}
       >
         {({ show }) => <div>{children}</div>}
