@@ -3,22 +3,20 @@ import dynamic from "next/dynamic";
 
 const WaterWave = dynamic(() => import("react-water-wave"), { ssr: false });
 
-export default function Water({ children }) {
+export default function Water({ children, imageUrl = "/123.jpg" }) {
   return (
     <div
       style={{
         width: "100%",
         height: "100vh",
-
-        background: `url("/234.jpg") no-repeat ,#FCF9F1`,
       }}
     >
       <WaterWave
-        imageUrl="/123.jpg"
+        imageUrl={imageUrl}
         style={{ width: "100%", height: "100%" }}
-        dropRadius={20}
-        perturbance={0.02}
-        resolution={512}
+        dropRadius={40}
+        perturbance={0.15}
+        resolution={200}
         interactive={true}
       >
         {({ show }) => <div>{children}</div>}
